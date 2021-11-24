@@ -1,0 +1,6 @@
+export { default as Home } from 'pages/Home'
+export { default as Careers } from 'pages/Careers'
+export { default as News} from 'pages/News'
+export { default as OurCauses} from 'pages/OurCauses'
+export { default as OurPortfolio} from 'pages/OurPortfolio'
+export { default as Suppliers} from 'pages/Suppliers'
