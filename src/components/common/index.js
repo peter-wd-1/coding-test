@@ -28,10 +28,10 @@ const StyledP = styled.p`
 const StyledH1 = styled.h1`
   display: inline;
   font-family: ${({ themeFont }) => themeFont.primary};
-  font-size: 4rem;
-  padding: 0px;
-  margin: 0px;
+  font-size: 4.5rem;
 `;
+
+const StyledSection = styled.div``;
 
 export const P = wrapContext(StyledP);
 export const H1 = wrapContext(StyledH1);
