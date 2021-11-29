@@ -32,4 +32,6 @@ export const Nav = styled.nav`
   grid-row: 2/-1;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 0px;
 `;

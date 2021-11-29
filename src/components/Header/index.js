@@ -10,12 +10,16 @@ const Logo = styled.img`
   grid-column: 1/2;
 `;
 
+const HeaderSection = styled(Section)`
+  background: white;
+`;
+
 export default function Header() {
   return (
-    <Section cols={5} rows={2} style={{ background: "white" }}>
+    <HeaderSection cols={5} rows={2}>
       <Logo src={logo} />
       <LoginBar />
       <NavigationBar />
-    </Section>
+    </HeaderSection>
   );
 }
