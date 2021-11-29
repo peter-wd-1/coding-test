@@ -4,9 +4,9 @@ import facebookIcon from "images/Facebook.svg";
 import instagramIcon from "images/Instagram.svg";
 import { LoginButton, LoginSection, SocialSection } from "./Atoms";
 
-export default function LoginBar() {
+export default function LoginBar({ forceRender }) {
   return (
-    <LoginSection cols={2}>
+    <LoginSection cols={2} forceRender={forceRender}>
       <SocialSection>
         <img src={twitterIcon} alt="twitterIcon" />
         <img src={facebookIcon} alt="facebookIcon" />

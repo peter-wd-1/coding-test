@@ -36,7 +36,7 @@ function genGrid(x = 1, y = 1) {
 export const Section = wrapContext(styled.div`
   display: grid;
   ${({ cols, rows, isMobile }) => {
-    return isMobile ? "grid-template-columns: 1fr" : genGrid(cols, rows);
+    return isMobile ? "grid-template-columns: 1fr;" : genGrid(cols, rows);
   }}
   align-items: center;
   justify-items: center;

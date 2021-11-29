@@ -1,10 +1,32 @@
 import styled from "@emotion/styled";
+import { wrapContext } from "components/common";
 import { Section } from "components/common";
 import loginIcon from "images/loginIcon.svg";
-export const LoginSection = styled(Section)`
+
+function forceRenderLogin(isMobile, forceRender) {
+  if (isMobile) {
+    if (forceRender) {
+      return "grid";
+    } else {
+      return "none";
+    }
+  }
+  if (!isMobile) {
+    if (forceRender) {
+      return "none";
+    } else {
+      return "grid";
+    }
+  }
+}
+
+export const LoginSection = wrapContext(styled(Section)`
+  display: ${({ isMobile, forceRender }) => {
+    return forceRenderLogin(isMobile, forceRender);
+  }};
   grid-row: 1/2;
   grid-column: 5/6;
-`;
+`);
 
 export const SocialSection = styled.div`
   width: 100px;
