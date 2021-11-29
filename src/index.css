@@ -1,5 +1,5 @@
 html {
-  font-size: 17px;
+  font-size: 100%;
   background: #f4f2eb;
 }
 body {
@@ -9,6 +9,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  overflow: hidden;
 }
 
 code {

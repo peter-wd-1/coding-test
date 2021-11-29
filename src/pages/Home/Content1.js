@@ -1,16 +1,27 @@
 import React from "react";
-import { Section1, Section1H1, Section1P } from "./Sections";
+import {
+  Section1,
+  Section1Desc,
+  Section1H1,
+  Section1P,
+  FlexSection1,
+  Section1Image1,
+  Section1Image2,
+  DecoBox,
+} from "./Atoms";
 import hero1 from "images/hero1.png";
 import hero2 from "images/hero2.png";
+import { Button } from "components/common";
 
 export default function Content1() {
   return (
     <Section1 cols={2}>
-      <div>
+      <Section1Desc>
         <Section1H1>
           To binging
           <div>
-            people <Section1H1>together.</Section1H1>
+            people{" "}
+            <Section1H1 style={{ fontStyle: "italic" }}>together.</Section1H1>
           </div>
         </Section1H1>
         <Section1P>
@@ -19,12 +30,13 @@ export default function Content1() {
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
         </Section1P>
-        <button>PORTFOLIO</button>
-      </div>
-      <div>
-        <img src={hero1} alt="hero-image-land" />
-        <img src={hero2} alt="hero-image-port" />
-      </div>
+        <Button>PORTFOLIO</Button>
+      </Section1Desc>
+      <FlexSection1>
+        <Section1Image1 src={hero1} alt="hero-image-land" />
+        <Section1Image2 src={hero2} alt="hero-image-port" />
+        <DecoBox />
+      </FlexSection1>
     </Section1>
   );
 }

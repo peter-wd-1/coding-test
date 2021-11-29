@@ -1,19 +1,20 @@
-import React, { Fragment } from "react";
+import React from "react";
 import twitterIcon from "images/Twitter.svg";
 import facebookIcon from "images/Facebook.svg";
 import instagramIcon from "images/Instagram.svg";
+import { LoginButton, LoginSection, SocialSection } from "./Atoms";
 
-export default function LoginBar(){
+export default function LoginBar() {
   return (
-    <Fragment>
-      <div name="socialShare">
+    <LoginSection cols={2}>
+      <SocialSection>
         <img src={twitterIcon} alt="twitterIcon" />
         <img src={facebookIcon} alt="facebookIcon" />
         <img src={instagramIcon} alt="instagramIcon" />
-      </div>
-      <div>
-        <p>Log In</p>
-      </div>
-    </Fragment>
-  )
+      </SocialSection>
+      <LoginButton>
+        <p style={{ paddingRight: "20px", fontSize: "1.2rem" }}>Log In</p>
+      </LoginButton>
+    </LoginSection>
+  );
 }
