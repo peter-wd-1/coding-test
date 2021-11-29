@@ -8,7 +8,7 @@ export default function ThemeContextProvider({ children }) {
     // I targeted landspace to cover both landscape and portrait
     // Since there are no landscape specification for design,
     // I decide not to seperate landscape from portrait design.
-    const media = window.matchMedia("(min-width: 801px)");
+    const media = window.matchMedia("(max-width: 801px)");
     const onChangeWidth = (event) => {
       setIsMobile(event.matches);
     };
@@ -21,7 +21,7 @@ export default function ThemeContextProvider({ children }) {
         isMobile,
         themeColor: {
           mustard: "#D8B243",
-          red: "#A1151A",
+          red: "#CB0007",
           baige: "#F4F2EB",
         },
         themeFont: {
