@@ -14,9 +14,13 @@ const variants = {
   close: {
     d: path[1],
   },
+  transitionEnd: {
+    display: "none",
+  },
 };
 
 const StyledMotionSvg = wrapContext(styled(motion.svg)`
+  display: ${({ isMobile }) => (isMobile ? "" : "none")};
   position: absolute;
   top: -200px;
   left: 20px;
@@ -27,7 +31,16 @@ const StyledMotionSvg = wrapContext(styled(motion.svg)`
 
 export default function NavBackground({ isVisible }) {
   return (
-    <StyledMotionSvg xmlns="http://www.w3.org/2000/svg" viewBox="1.5 0 12 25">
+    <StyledMotionSvg
+      animate={{
+        display: isVisible ? "visible" : "none",
+        transition: {
+          delay: isVisible ? 0 : 1,
+        },
+      }}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="1.5 0 12 25"
+    >
       <motion.path
         d="M 0 0 L 12 0 C 16 20 11 22 0 21 L 0 21Z"
         fill="#95050A"

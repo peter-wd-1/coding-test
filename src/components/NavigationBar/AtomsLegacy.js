@@ -13,7 +13,9 @@ export const NavUl = wrapContext(styled.ul`
   list-style: none;
   font-family: ${({ themeFont }) => themeFont.sub};
   font-size: ${({ isMobile }) =>
-    isMobile ? "2.3rem" : "clamp(1rem, -3.5rem + 4.8vw, 1.6rem)"};
+    isMobile
+      ? "clamp(1.7rem, 0.6655rem + 8.2759vw, 2.4rem)"
+      : "clamp(1rem, -3.5rem + 4.8vw, 1.6rem)"};
   color: black;
   ${({ isMobile }) => {
     return css`

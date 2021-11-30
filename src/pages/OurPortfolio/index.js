@@ -1,9 +1,9 @@
-
-import React from 'react';
-export default function OurPortfolio(){
+import { H1 } from "components/common";
+import React from "react";
+export default function OurPortfolio() {
   return (
-    <div>
-      OurPortfolio
+    <div style={{ height: "100vh" }}>
+      <H1>OurPortfolio</H1>
     </div>
-  )
+  );
 }

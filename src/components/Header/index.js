@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NavigationBar from "components/NavigationBar";
 import LoginBar from "components/LoginBar";
 import logo from "images/icon.png";
@@ -9,6 +9,11 @@ import { MenuButton, HeaderSection } from "./Atoms";
 export default function Header() {
   const theme = useContext(ThemeContext);
   const [menuClicked, setMenuClicked] = useState(true);
+
+  useEffect(() => {
+    console.log({ theme });
+    if (theme.isMobile) setMenuClicked(false);
+  }, [theme]);
 
   return (
     <HeaderSection cols={theme.isMobile ? 1 : 5} rows={theme.isMobile ? 1 : 2}>
