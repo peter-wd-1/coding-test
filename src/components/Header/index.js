@@ -3,19 +3,7 @@ import NavigationBar from "components/NavigationBar";
 import LoginBar from "components/LoginBar";
 import logo from "images/icon.png";
 import { ThemeContext } from "components/ThemeContext";
-import { HeaderSection, Logo } from "./Atoms";
-import styled from "@emotion/styled";
-import { wrapContext } from "components/common";
-
-const MenuButton = wrapContext(styled.button`
-  left: 0px;
-  height: 100%;
-  width: 80px;
-  position: absolute;
-  border: none;
-  background: ${({ themeColor }) => themeColor.baige};
-  display: ${({ isMobile }) => (isMobile ? "block" : "none")};
-`);
+import { HeaderSection, Logo, MenuButton } from "./Atoms";
 
 export default function Header() {
   const theme = useContext(ThemeContext);

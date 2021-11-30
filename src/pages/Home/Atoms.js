@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import { Image } from "components/common";
 import ctabuttonIcon from "images/CTA.svg";
-import { P, H1, Section, wrapContext, FlexSection } from "components/common";
+import { P, H1, Section, FlexSection } from "components/common";
+import { wrapContext } from "utils";
 
 //Section1 styles
 export const Section1 = wrapContext(styled(Section)`

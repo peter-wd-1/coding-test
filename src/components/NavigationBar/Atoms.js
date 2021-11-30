@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
-import { wrapContext } from "components/common";
 import { NavLink } from "react-router-dom";
-import { css, jsx } from "@emotion/react";
+import { css } from "@emotion/react";
 import { motion } from "framer-motion";
+import { wrapContext } from "utils";
+
 export const NavUl = wrapContext(styled.ul`
   align-items: center;
   justify-items: ${({ isMobile }) => (isMobile ? "start" : "center")};

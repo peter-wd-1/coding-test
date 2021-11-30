@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { wrapContext } from "components/common";
+import { wrapContext } from "utils";
 import { Section } from "components/common";
 import loginIcon from "images/loginIcon.svg";
 
