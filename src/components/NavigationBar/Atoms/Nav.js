@@ -6,8 +6,8 @@ import { wrapContext } from "utils";
 import { variants } from "./animations";
 
 const StyledMotionNav = wrapContext(styled(motion.nav)`
-  grid-row: ${({ isMobile }) => (isMobile ? "none" : "2/-1")};
-  grid-column: ${({ isMobile }) => (isMobile ? "none" : "3/-1")};
+  grid-row: ${({ isMobile }) => (isMobile ? "" : "2/-1")};
+  grid-column: ${({ isMobile }) => (isMobile ? "" : "3/-1")};
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
@@ -16,7 +16,7 @@ const StyledMotionNav = wrapContext(styled(motion.nav)`
     return isMobile
       ? css`
           position: absolute;
-          top: 100px;
+          top: 0px;
           left: 0px;
           background: ${isMobile ? "noen" : themeColor.baige};
           z-index: 10000;

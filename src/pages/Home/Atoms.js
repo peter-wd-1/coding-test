@@ -17,6 +17,8 @@ export const Section1Desc = styled.div`
 export const Section1H1 = wrapContext(styled(H1)`
   color: white;
   letter-spacing: -0.1rem;
+  font-size: clamp(3rem, 2.5995rem + 3.2041vw, 6.1rem);
+  ${({ isMobile }) => (isMobile ? " line-height: 3.7rem" : "")};
 `);
 
 export const Section1P = wrapContext(styled(P)`
