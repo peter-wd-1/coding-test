@@ -3,20 +3,7 @@ import { PageContext } from "pages/PageContext";
 import { NavLi, NavUl, Nav } from "./Atoms";
 import LoginBar from "components/LoginBar";
 import { motion } from "framer-motion";
-
-const variants = {
-  hidden: {
-    opacity: 0,
-    x: -40,
-  },
-  visible: (i) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: 0.1 + i * 0.05,
-    },
-  }),
-};
+import { Li } from "./Atoms";
 
 export default function NavigationBar() {
   const pages = useContext(PageContext);
