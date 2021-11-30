@@ -23,10 +23,11 @@ const StyledMotionSvg = wrapContext(styled(motion.svg)`
   display: ${({ isMobile }) => (isMobile ? "" : "none")};
   position: absolute;
   top: -200px;
-  left: 20px;
+  left: 0;
   z-index: -1;
   height: 130vh;
-  overflow: visible;
+  width: 100vw;
+  overflow-x: hidden;
 `);
 
 export default function NavBackground({ isVisible }) {

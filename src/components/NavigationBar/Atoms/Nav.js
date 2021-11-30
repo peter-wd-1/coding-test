@@ -17,7 +17,7 @@ const StyledMotionNav = wrapContext(styled(motion.nav)`
       ? css`
           position: absolute;
           top: 100px;
-          left: 10px;
+          left: 0px;
           background: ${isMobile ? "noen" : themeColor.baige};
           z-index: 10000;
         `
