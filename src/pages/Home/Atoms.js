@@ -3,6 +3,7 @@ import { Image } from "components/common";
 import ctabuttonIcon from "images/CTA.svg";
 import { P, H1, Section, FlexSection } from "components/common";
 import { wrapContext } from "utils";
+import { css } from "@emotion/react";
 
 //Section1 styles
 export const Section1 = wrapContext(styled(Section)`
@@ -11,7 +12,7 @@ export const Section1 = wrapContext(styled(Section)`
 
 export const Section1Desc = styled.div`
   box-sizing: border-box;
-  padding: 10%;
+  padding: ${({ isMobile }) => (isMobile ? "0" : "10%")};
 `;
 
 export const Section1H1 = wrapContext(styled(H1)`
@@ -23,10 +24,22 @@ export const Section1H1 = wrapContext(styled(H1)`
 
 export const Section1P = wrapContext(styled(P)`
   color: white;
-  width: 90%;
+  width: ${({ isMobile }) => (isMobile ? "100vw" : "90%")};
   margin-bottom: 4rem;
   ${({ isMobile }) => (isMobile ? " line-height: 1.4rem" : "")};
   font-size: clamp(1rem, 0.85rem + 1.2vw, 1.6rem);
+  ${({ isMobile, src }) => {
+    if (isMobile) {
+      return css`
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(${src});
+        round-position: center top;
+        padding: 0px;
+        padding: 10px;
+        margin: 0px;
+      `;
+    }
+  }}
 `);
 
 export const FlexSection1 = wrapContext(styled(FlexSection)`
@@ -71,6 +84,7 @@ export const Section2ImageDeco = wrapContext(styled.div`
   background-color: ${({ themeColor }) => themeColor.mustard};
   position: relative;
   filter: drop-shadow(0 22px 7px rgba(0, 0, 0, 0.25));
+  display: ${({ isMobile }) => (isMobile ? "none" : "")};
 `);
 
 export const Section2Image = wrapContext(styled.div`
@@ -88,11 +102,12 @@ export const Section2Image = wrapContext(styled.div`
 
 export const Section2H1 = styled(Section1H1)`
   color: black;
-  line-height: 5rem;
+  line-height: ${({ isMobile }) => (isMobile ? "2.0rem" : "5rem")};
   font-size: 5rem;
   font-weight: 400;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   letter-spacing: -4px;
+  font-size: clamp(3rem, 2.5995rem + 3.2041vw, 6.1rem);
 `;
 
 export const Section2H2 = styled(Section2H1)`
@@ -107,10 +122,22 @@ export const FlexSection2 = styled(FlexSection1)`
 `;
 
 export const Section2P = styled(Section1P)`
-  color: black;
+  color: ${({ isMobile }) => (isMobile ? "white" : "black")};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 2.5rem;
   font-weight: 300;
+  ${({ isMobile, src }) => {
+    if (isMobile) {
+      return css`
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(${src});
+        round-position: center top;
+        padding: 0px;
+        padding: 10px;
+        margin: 0px;
+      `;
+    }
+  }}
 `;
 
 export const Section2Deco1 = styled.div`

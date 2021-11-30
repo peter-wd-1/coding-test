@@ -25,7 +25,7 @@ export default function Content2() {
             Knowing the numbers is never{" "}
             <Section2H1 style={{ fontStyle: "italic" }}>enough.</Section2H1>
           </Section2H1>
-          <Section2P>
+          <Section2P src={detailImage}>
             It's about understanding the opportunities and challenges behind the
             numbers — and planning for a stronger future. What's the right
             product selection for your customers? Which tools and information

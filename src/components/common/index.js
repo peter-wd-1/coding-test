@@ -44,6 +44,6 @@ export const Button = wrapContext(styled.button`
   height: 5rem;
   background: ${({ themeColor }) => themeColor.mustard};
   border: none;
-  border-radius: 12px;
+  border-radius: ${({ isMobile }) => (isMobile ? "0" : "12px")};
   cursor: pointer;
 `);

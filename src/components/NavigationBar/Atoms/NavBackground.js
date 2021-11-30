@@ -10,6 +10,7 @@ const StyledMotionSvg = wrapContext(styled(motion.svg)`
   left: 0;
   z-index: -1;
   width: 100vw;
+  height: auto;
   overflow-x: hidden;
 `);
 
@@ -23,7 +24,7 @@ export default function NavBackground({ isVisible }) {
         },
       }}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 16 20"
+      viewBox="0 0 13 20"
     >
       <motion.path
         d="M 0 0 L 12 0 C 16 20 11 22 0 21 L 0 21Z"
