@@ -17,7 +17,7 @@ const StyledMotionNav = wrapContext(styled(motion.nav)`
       ? css`
           position: absolute;
           top: 100px;
-          left: 5vw;
+          left: 10px;
           background: ${themeColor.baige};
         `
       : "";

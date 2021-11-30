@@ -17,7 +17,7 @@ export default function Header() {
       </MenuButton>
       <Logo src={logo} />
       <LoginBar isVisible={menuClicked} />
-      <NavigationBar isVisible={menuClicked} />
+      <NavigationBar isVisible={menuClicked} onNavClick={setMenuClicked} />
     </HeaderSection>
   );
 }

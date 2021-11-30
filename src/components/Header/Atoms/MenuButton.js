@@ -5,10 +5,11 @@ import { wrapContext } from "utils";
 export const StyledMotionMenuButton = wrapContext(styled(motion.button)`
   left: 0px;
   height: 100%;
-  width: 80px;
+  width: 60px;
   position: absolute;
   border: none;
-  background: ${({ themeColor }) => themeColor.baige};
+  color: white;
+  background: ${({ themeColor }) => themeColor.red};
   display: ${({ isMobile }) => (isMobile ? "block" : "none")};
 `);
 
