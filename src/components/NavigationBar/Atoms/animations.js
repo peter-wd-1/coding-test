@@ -11,3 +11,11 @@ export const variants = {
     },
   }),
 };
+
+export const navVariants = {
+  ...variants,
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+};

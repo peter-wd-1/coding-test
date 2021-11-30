@@ -1,13 +1,15 @@
 import React from "react";
-import { variants } from "../animation";
+import { variants } from "./animations";
+import { motion } from "framer-motion";
 
-export default function Li({ children, ...props }) {
+export default function Li({ children, index, isVisible, ...props }) {
   return (
     <motion.li
-      custom={props.key}
+      custom={index}
       initial="hidden"
-      animate="visible"
+      animate={isVisible ? "visible" : "hidden"}
       variants={variants}
+      {...props}
     >
       {children}
     </motion.li>

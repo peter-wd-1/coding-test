@@ -3,16 +3,6 @@ import styled from "@emotion/styled";
 import { Section } from "components/common";
 import { wrapContext } from "utils";
 
-export const MenuButton = wrapContext(styled.button`
-  left: 0px;
-  height: 100%;
-  width: 80px;
-  position: absolute;
-  border: none;
-  background: ${({ themeColor }) => themeColor.baige};
-  display: ${({ isMobile }) => (isMobile ? "block" : "none")};
-`);
-
 export const Logo = wrapContext(styled.img`
   grid-row: 1/6;
   grid-column: 1/2;
@@ -22,7 +12,7 @@ export const Logo = wrapContext(styled.img`
   justify-self: ${({ isMobile }) => (isMobile ? "center" : "start")};
 `);
 
-export const HeaderSection = styled(Section)`
-  position: relative;
-  background: white;
-`;
+// export const HeaderSection = styled(Section)`
+//   position: relative;
+//   background: white;
+// `;

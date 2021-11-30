@@ -1,28 +1,20 @@
 import React, { useContext } from "react";
 import { PageContext } from "pages/PageContext";
-import { NavLi, NavUl, Nav } from "./Atoms";
+import { NavLi, NavUl } from "./AtomsLegacy";
 import LoginBar from "components/LoginBar";
-import { motion } from "framer-motion";
-import { Li } from "./Atoms";
+import { Li, Nav } from "components/NavigationBar/Atoms";
 
-export default function NavigationBar() {
+export default function NavigationBar({ isVisible }) {
   const pages = useContext(PageContext);
   return (
-    <Nav>
+    <Nav isVisible={isVisible}>
       <LoginBar forceRender />
       <NavUl>
-        {pages.map((name, key) => {
+        {pages.map((name, i) => {
           return (
-            <motion.li
-              custom={key}
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-            >
-              <NavLi to={name.replace(/ /g, "")} key={key}>
-                {name}
-              </NavLi>
-            </motion.li>
+            <Li key={i} index={i} isVisible={isVisible}>
+              <NavLi to={name.replace(/ /g, "")}>{name}</NavLi>
+            </Li>
           );
         })}
       </NavUl>
