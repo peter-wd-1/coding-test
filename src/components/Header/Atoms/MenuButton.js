@@ -7,6 +7,7 @@ export const StyledMotionMenuButton = wrapContext(styled(motion.button)`
   height: 100%;
   width: 60px;
   position: absolute;
+  z-index: 100000;
   border: none;
   color: white;
   background: ${({ themeColor }) => themeColor.red};

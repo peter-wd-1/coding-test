@@ -9,7 +9,7 @@ import { MenuButton, HeaderSection } from "./Atoms";
 export default function Header() {
   const theme = useContext(ThemeContext);
   const [menuClicked, setMenuClicked] = useState(true);
-  console.log({ menuClicked });
+
   return (
     <HeaderSection cols={theme.isMobile ? 1 : 5} rows={theme.isMobile ? 1 : 2}>
       <MenuButton menuClicked={menuClicked} onMenuClicked={setMenuClicked}>

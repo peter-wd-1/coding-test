@@ -18,7 +18,8 @@ const StyledMotionNav = wrapContext(styled(motion.nav)`
           position: absolute;
           top: 100px;
           left: 10px;
-          background: ${themeColor.baige};
+          background: ${isMobile ? "noen" : themeColor.baige};
+          z-index: 10000;
         `
       : "";
   }}
@@ -26,14 +27,5 @@ const StyledMotionNav = wrapContext(styled(motion.nav)`
 
 export default function Nav({ children, isVisible, ...props }) {
   console.log({ isVisible });
-  return (
-    <StyledMotionNav
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={variants}
-      {...props}
-    >
-      {children}
-    </StyledMotionNav>
-  );
+  return <StyledMotionNav {...props}>{children}</StyledMotionNav>;
 }
