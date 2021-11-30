@@ -25,6 +25,8 @@ export const Section1P = wrapContext(styled(P)`
   color: white;
   width: 90%;
   margin-bottom: 4rem;
+  ${({ isMobile }) => (isMobile ? " line-height: 1.4rem" : "")};
+  font-size: clamp(1rem, 0.85rem + 1.2vw, 1.6rem);
 `);
 
 export const FlexSection1 = wrapContext(styled(FlexSection)`

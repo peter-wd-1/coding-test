@@ -18,12 +18,14 @@ export const NavUl = wrapContext(styled.ul`
       : "clamp(1rem, -3.5rem + 4.8vw, 1.6rem)"};
   color: black;
   ${({ isMobile }) => {
-    return css`
-      padding: 0px;
-      padding-top: 100px;
-      margin: 0px;
-      line-height: 4rem;
-    `;
+    if (isMobile) {
+      return css`
+        padding: 0px;
+        padding-top: 100px;
+        margin: 0px;
+        line-height: 4rem;
+      `;
+    }
   }}
 `);
 
