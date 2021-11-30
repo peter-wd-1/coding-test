@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
+import { wrapContext } from "utils";
 
 const path = [
   "M 0 0 L 15 0 C 17 21 12 21 0 19 L 0 19",
@@ -15,19 +16,22 @@ const variants = {
   },
 };
 
-const StyledMotionSvg = styled(motion.svg)`
+const StyledMotionSvg = wrapContext(styled(motion.svg)`
   position: absolute;
   top: -200px;
   left: 20px;
   z-index: -1;
-  height: 130vh;
-  width: auto;
+  width: 90vw;
   overflow: visible;
-`;
+`);
 
 export default function NavBackground({ isVisible }) {
   return (
-    <StyledMotionSvg xmlns="http://www.w3.org/2000/svg" viewBox="1.5 0 12 25">
+    <StyledMotionSvg
+      isVisible={isVisible}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="1.5 0 12 25"
+    >
       <motion.path
         d="M 0 0 L 12 0 C 16 20 11 22 0 21 L 0 21Z"
         fill="#95050A"

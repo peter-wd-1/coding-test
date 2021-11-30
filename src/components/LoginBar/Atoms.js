@@ -10,6 +10,7 @@ export const LoginSection = wrapContext(styled.div`
     if (isMobile) {
       return css`
         position: absolute;
+        z-index: 10;
         right: 0;
         top: 0;
         height: 100%;

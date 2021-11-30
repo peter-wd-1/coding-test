@@ -7,7 +7,7 @@ export const variants = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 0.1 + i * 0.05,
+      delay: 0.34 + i * 0.05,
     },
   }),
 };
