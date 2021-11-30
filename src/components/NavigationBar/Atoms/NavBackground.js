@@ -21,23 +21,20 @@ const StyledMotionSvg = wrapContext(styled(motion.svg)`
   top: -200px;
   left: 20px;
   z-index: -1;
-  width: 90vw;
+  height: 130vh;
   overflow: visible;
 `);
 
 export default function NavBackground({ isVisible }) {
   return (
-    <StyledMotionSvg
-      isVisible={isVisible}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="1.5 0 12 25"
-    >
+    <StyledMotionSvg xmlns="http://www.w3.org/2000/svg" viewBox="1.5 0 12 25">
       <motion.path
         d="M 0 0 L 12 0 C 16 20 11 22 0 21 L 0 21Z"
         fill="#95050A"
         variants={variants}
         animate={isVisible ? "open" : "close"}
         transition={{
+          delay: isVisible ? 0 : 0.07,
           type: "spring",
           stiffness: 400,
           damping: 33,
@@ -49,7 +46,7 @@ export default function NavBackground({ isVisible }) {
         variants={variants}
         animate={isVisible ? "open" : "close"}
         transition={{
-          delay: 0.2,
+          delay: isVisible ? 0.2 : 0.03,
           type: "spring",
           stiffness: 400,
           damping: 33,
@@ -61,7 +58,7 @@ export default function NavBackground({ isVisible }) {
         variants={variants}
         animate={isVisible ? "open" : "close"}
         transition={{
-          delay: 0.3,
+          delay: isVisible ? 0.3 : 0,
           type: "spring",
           stiffness: 400,
           damping: 33,
