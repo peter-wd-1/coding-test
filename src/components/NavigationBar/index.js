@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { PageContext } from "pages/PageContext";
 import { NavLi, NavUl } from "./AtomsLegacy";
-import LoginBar from "components/LoginBar";
 import { Li, Nav, NavBackground } from "components/NavigationBar/Atoms";
 
 export default function NavigationBar({ isVisible, onNavClick }) {

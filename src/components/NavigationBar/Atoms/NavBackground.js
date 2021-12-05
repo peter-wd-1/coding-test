@@ -4,7 +4,6 @@ import { wrapContext } from "utils";
 import { navBackVariants as variants } from "./animations";
 
 const StyledMotionSvg = wrapContext(styled(motion.svg)`
-  display: ${({ isMobile }) => (isMobile ? "" : "none")};
   position: absolute;
   top: 0;
   left: 0;
@@ -12,6 +11,7 @@ const StyledMotionSvg = wrapContext(styled(motion.svg)`
   width: 100vw;
   height: auto;
   overflow-x: hidden;
+  ${({ isMobile }) => (isMobile ? "" : "display:none;")}
 `);
 
 export default function NavBackground({ isVisible }) {

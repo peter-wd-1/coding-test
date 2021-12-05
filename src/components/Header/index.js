@@ -8,11 +8,11 @@ import { MenuButton, HeaderSection } from "./Atoms";
 
 export default function Header() {
   const theme = useContext(ThemeContext);
-  const [menuClicked, setMenuClicked] = useState(true);
+  const [menuClicked, setMenuClicked] = useState(false);
 
   useEffect(() => {
-    console.log({ theme });
-    if (theme.isMobile) setMenuClicked(false);
+    setMenuClicked(!theme.isMobile);
+    console.log("theme status changed");
   }, [theme]);
 
   return (
@@ -21,7 +21,7 @@ export default function Header() {
         MENU
       </MenuButton>
       <Logo src={logo} />
-      <LoginBar isVisible={menuClicked} />
+      <LoginBar />
       <NavigationBar isVisible={menuClicked} onNavClick={setMenuClicked} />
     </HeaderSection>
   );

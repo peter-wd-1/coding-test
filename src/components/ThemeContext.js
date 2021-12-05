@@ -12,11 +12,12 @@ export default function ThemeContextProvider({ children }) {
     const onChangeWidth = (event) => {
       setIsMobile(event.matches);
     };
-    setIsMobile(media.matches);
     console.log("This page is mobile : ", media.matches);
+    setIsMobile(media.matches);
     media.addEventListener("change", onChangeWidth);
     return () => media.removeEventListener("cahnge", onChangeWidth);
   }, []);
+
   return (
     <ThemeContext.Provider
       value={{
