@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import { css } from "@emotion/react";
 import { wrapContext } from "utils";
 import { variants } from "./animations";
@@ -28,12 +28,7 @@ const StyledMotionNav = wrapContext(styled(motion.nav)`
 `);
 
 export default function Nav({ children, isVisible, ...props }) {
-  const themeContext = useContext(ThemeContext);
   const [isInital, setIsInitial] = useState(false);
-  useEffect(() => {
-    //first rendering  mobile page
-    setIsInitial(themeContext.isMobile);
-  }, [themeContext.isMobile]);
 
   useEffect(() => {
     //after menu clicked it's no longer inital rednering
