@@ -1,3 +1,3 @@
 # React Project 
-## SVG animagion
+## SVG animation
 ## Mobile responsive
